@@ -7,17 +7,17 @@ public class FilledRouteReview {
     private String routeName;
     private String imageUrl;
     private String routeCode;
-    private List<RouteContent> routeContents;
+    private List<RouteContent> routeReviews;
 
     public FilledRouteReview(CyclingRoute cyclingRoute, List<Review> reviews){
         setRouteName(cyclingRoute.getName());
         setImageUrl(cyclingRoute.getImg_url());
         setRouteCode(cyclingRoute.getRouteCode());
-        routeContents = new ArrayList<>();
+        routeReviews = new ArrayList<>();
         reviews.forEach(review -> {
-            routeContents.add(new RouteContent(review.getAuteur(), review.getContent(), review.getRouteId()));
+            routeReviews.add(new RouteContent(review.getAuteur(), review.getContent(), review.getRouteId()));
         });
-        setRouteContents(routeContents);
+        setRouteReviews(routeReviews);
     }
 
     public String getRouteCode() {
@@ -44,11 +44,11 @@ public class FilledRouteReview {
         this.imageUrl = imageUrl;
     }
 
-    public List<RouteContent> getRouteContents() {
-        return routeContents;
+    public List<RouteContent> getRouteReviews() {
+        return routeReviews;
     }
 
-    public void setRouteContents(List<RouteContent> routeContents) {
-        this.routeContents = routeContents;
+    public void setRouteReviews(List<RouteContent> routeReviews) {
+        this.routeReviews = routeReviews;
     }
 }
