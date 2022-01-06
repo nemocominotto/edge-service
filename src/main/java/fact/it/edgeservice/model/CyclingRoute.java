@@ -5,8 +5,17 @@ public class CyclingRoute {
     private String name;
     private String img_url;
     private String routeCode;
+    private String postcode;
 
     public CyclingRoute() {
+    }
+
+    public String getPostcode() {
+        return postcode;
+    }
+
+    public void setPostcode(String postcode) {
+        this.postcode = postcode;
     }
 
     public int getId() {

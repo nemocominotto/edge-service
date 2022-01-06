@@ -35,4 +35,13 @@ public class FilledRouteReviewController {
 
         return new FilledRouteReview(cyclingRoute, responseEntity.getBody());
     }
+
+    @GetMapping("/review/route/{routeCode}/auteur/{auteur}")
+    public FilledRouteReview getReviewsAndRoute(@PathVariable String routeCode, @PathVariable String auteur){
+        CyclingRoute cyclingRoute = restTemplate.getForObject("http://" + cyclingRouteServiceBaseUrl + "/cyclingRoutes/code/{routeCode}", CyclingRoute.class, routeCode);
+        ResponseEntity<List<Review>> responseEntity = restTemplate.exchange("http://" + reviewServiceBaseUrl + "/reviews/auteurs/{auteur}/routeCode/{routeCode}", HttpMethod.GET, null, new ParameterizedTypeReference<List<Review>>() {
+        }, auteur, routeCode);
+
+        return new FilledRouteReview(cyclingRoute, responseEntity.getBody());
+    }
 }

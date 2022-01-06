@@ -15,7 +15,7 @@ public class FilledRouteReview {
         setRouteCode(cyclingRoute.getRouteCode());
         routeReviews = new ArrayList<>();
         reviews.forEach(review -> {
-            routeReviews.add(new RouteContent(review.getAuteur(), review.getContent(), review.getRouteId()));
+            routeReviews.add(new RouteContent(review.getAuteur(), review.getTitel(), review.getContent()));
         });
         setRouteReviews(routeReviews);
     }

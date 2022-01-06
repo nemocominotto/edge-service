@@ -2,24 +2,24 @@ package fact.it.edgeservice.model;
 
 public class RouteContent {
     private String auteur;
+    private String titel;
     private String content;
-    private String routeCode;
 
     public RouteContent() {
     }
 
-    public RouteContent(String auteur, String content, String routeCode) {
+    public RouteContent(String auteur, String titel, String content) {
         this.auteur = auteur;
+        this.titel = titel;
         this.content = content;
-        this.routeCode = routeCode;
     }
 
-    public String getRouteCode() {
-        return routeCode;
+    public String getTitel() {
+        return titel;
     }
 
-    public void setRouteCode(String routeCode) {
-        this.routeCode = routeCode;
+    public void setTitel(String titel) {
+        this.titel = titel;
     }
 
     public String getAuteur() {
