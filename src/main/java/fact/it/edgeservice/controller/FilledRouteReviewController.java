@@ -53,6 +53,22 @@ public class FilledRouteReviewController {
         return cyclingRoute;
     }
 
+    @PostMapping("/add/review")
+    public FilledRouteReview addReview(@RequestParam String auteur, @RequestParam String titel, @RequestParam String content, @RequestParam String routeCode){
+        Review review =
+                restTemplate.postForObject("http://" + reviewServiceBaseUrl + "/reviews",
+                        new Review(auteur, titel, content, routeCode), Review.class);
+
+        ResponseEntity<List<Review>> reviews =
+                restTemplate.exchange("http://" + reviewServiceBaseUrl + "/reviews/code/" + routeCode,
+                        HttpMethod.GET, null, new ParameterizedTypeReference<List<Review>>() {});
+
+        CyclingRoute cyclingRoute =
+                restTemplate.getForObject("http://" + cyclingRouteServiceBaseUrl + "/cyclingRoutes/code/" + routeCode, CyclingRoute.class);
+
+        return new FilledRouteReview(cyclingRoute, reviews.getBody());
+    }
+
     @PutMapping("update/route")
     public CyclingRoute updateCyclingRoute(@RequestBody CyclingRoute updateCyclingRoute){
         CyclingRoute cyclingRoute =
