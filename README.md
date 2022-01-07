@@ -1,5 +1,20 @@
 # edge-service
 
+Onze applicatie gaat over fietsroutes. Een fietsroute behoort tot een gemeente en in een gemeente kunnen meerdere routes zijn. Ook kunnen fietsers een geschreven review met naam achterlaten bij een route. Een route kan dan ook meerdere reviews hebben. Er zijn get endpoints om makkelijk een review te zien + gemeente op basis van postcode en reviews op basis van routecode. Dit wordt via de workflow allemaal getest, naar Sonarcloud gestuurd op te checken en tot slot naar Docker hub geüpload. Tot slot worden de containers gedeployed naar Oktetocloud
+
+![image](https://user-images.githubusercontent.com/57801327/148607794-d1505b1c-9aab-4b88-b994-f7d215186e10.png)
+- https://github.com/nemocominotto/review-service
+- https://github.com/JulianKoppens/cycling-route-service
+- https://github.com/JetzeJanssens/gemeente-service
+
+## OktetoCloud
+![image](https://user-images.githubusercontent.com/57801327/148607308-ea02418e-fd07-4f33-815a-d534a376bd46.png)
+![image](https://user-images.githubusercontent.com/57801327/148607444-2cb4feaa-fdd4-4178-85c7-cb221382955a.png)
+
+## Docker
+![image](https://user-images.githubusercontent.com/57801327/148608009-43ec9f81-1e5b-461a-987f-fd4789d65eb5.png)
+
+
 ## Endpoints
 
 ### GET
