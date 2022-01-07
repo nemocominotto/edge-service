@@ -10,6 +10,13 @@ public class Review {
     public Review() {
     }
 
+    public Review(String auteur, String titel, String content, String routeId) {
+        this.auteur = auteur;
+        this.titel = titel;
+        this.content = content;
+        this.routeId = routeId;
+    }
+
     public String getId() {
         return id;
     }

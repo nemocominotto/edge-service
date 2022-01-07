@@ -8,6 +8,11 @@ public class Gemeente {
     public Gemeente() {
     }
 
+    public Gemeente(String postcode, String naam) {
+        this.postcode = postcode;
+        this.naam = naam;
+    }
+
     public String getId() {
         return id;
     }
