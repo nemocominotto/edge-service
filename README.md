@@ -11,6 +11,13 @@ Onze applicatie gaat over fietsroutes. Een fietsroute behoort tot een gemeente e
 ![image](https://user-images.githubusercontent.com/57801327/148607308-ea02418e-fd07-4f33-815a-d534a376bd46.png)
 ![image](https://user-images.githubusercontent.com/57801327/148607444-2cb4feaa-fdd4-4178-85c7-cb221382955a.png)
 
+## SonarCloud
+![image](https://user-images.githubusercontent.com/57801327/148608932-f0f868ea-76c9-4443-8aea-81c58f1d74b5.png)
+![image](https://user-images.githubusercontent.com/57801327/148608942-d3450617-cf85-4661-8b90-db2e0d7de3ae.png)
+![image](https://user-images.githubusercontent.com/57801327/148608946-cfbeb285-16ba-4058-9d08-58485103c59e.png)
+![image](https://user-images.githubusercontent.com/57801327/148608984-a3cd1770-1473-4579-a737-44736410da9d.png)
+
+
 ## Docker
 ![image](https://user-images.githubusercontent.com/57801327/148608009-43ec9f81-1e5b-461a-987f-fd4789d65eb5.png)
 
