@@ -6,14 +6,14 @@ import java.util.List;
 public class FilledRouteGemeenteReview {
     private String naam;
     private String img;
-    private String gemeente;
+    private String startGemeente;
     private String postcode;
     private List<RouteContent> routeReviews;
 
     public FilledRouteGemeenteReview(CyclingRoute cyclingRoute, Gemeente gemeente, List<Review> reviews){
         setNaam(cyclingRoute.getName());
         setImg(cyclingRoute.getImg_url());
-        setGemeente(gemeente.getNaam());
+        setStartGemeente(gemeente.getNaam());
         setPostcode(cyclingRoute.getPostcode());
         routeReviews = new ArrayList<>();
         reviews.forEach(review -> {
@@ -38,12 +38,12 @@ public class FilledRouteGemeenteReview {
         this.img = img;
     }
 
-    public String getGemeente() {
-        return gemeente;
+    public String getStartGemeente() {
+        return startGemeente;
     }
 
-    public void setGemeente(String gemeente) {
-        this.gemeente = gemeente;
+    public void setStartGemeente(String startGemeente) {
+        this.startGemeente = startGemeente;
     }
 
     public String getPostcode() {

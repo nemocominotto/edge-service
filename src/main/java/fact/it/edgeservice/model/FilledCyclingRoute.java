@@ -1,36 +1,16 @@
 package fact.it.edgeservice.model;
 
-public class CyclingRoute {
-    private int id;
+public class FilledCyclingRoute {
     private String name;
     private String img_url;
     private String routeCode;
     private String postcode;
 
-    public CyclingRoute() {
-    }
-
-    public CyclingRoute(String name, String img_url, String routeCode, String postcode) {
-        this.name = name;
-        this.img_url = img_url;
-        this.routeCode = routeCode;
-        this.postcode = postcode;
-    }
-
-    public String getPostcode() {
-        return postcode;
-    }
-
-    public void setPostcode(String postcode) {
-        this.postcode = postcode;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public FilledCyclingRoute(CyclingRoute cyclingRoute){
+        setName(cyclingRoute.getName());
+        setImg_url(cyclingRoute.getImg_url());
+        setRouteCode(cyclingRoute.getRouteCode());
+        setPostcode(cyclingRoute.getPostcode());
     }
 
     public String getName() {
@@ -55,5 +35,13 @@ public class CyclingRoute {
 
     public void setRouteCode(String routeCode) {
         this.routeCode = routeCode;
+    }
+
+    public String getPostcode() {
+        return postcode;
+    }
+
+    public void setPostcode(String postcode) {
+        this.postcode = postcode;
     }
 }
